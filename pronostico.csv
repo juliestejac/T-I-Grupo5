@@ -1,0 +1,49 @@
+persona,Ronda,EquipoLocal,EquipoVisitante,GanaLocal,GanaVisitante,Empate
+Juana,Fase Grupos,Qatar ,Ecuador,0,0,1
+Juana,Fase Grupos,England,Iran ,1,0,0
+Juana,Fase Grupos,Senegal,Netherlands ,1,0,0
+Juana,Fase Grupos,USA,Wales ,0,0,1
+Juana,Fase Grupos,Argentina,Saudi Arabia ,1,0,0
+Juana,Fase Grupos,Denmark ,Tunisia ,0,0,1
+Juana,Fase Grupos,Mexico ,Poland ,0,0,1
+Juana,Fase Grupos,France,Australia,1,0,0
+Juana,Fase Grupos,Morocco ,Croatia ,1,0,0
+Juana,Fase Grupos,Germany ,Japan,1,0,0
+Juana,Fase Grupos,Espa¤a,Costa Rica,0,0,1
+Juana,Fase Grupos,Belgica,Canada,1,0,0
+Juana,Fase Grupos,Switzerland,Cameroon,1,0,0
+Juana,Fase Grupos,Uruguay,South Korea,0,0,1
+Juana,Fase Grupos,Portugal,Ghana,1,0,0
+Juana,Fase Grupos,Brazil,Serbia,1,0,0
+Juana,Fase Grupos,Wales,Iran,0,0,1
+Juana,Fase Grupos,Qatar,Senegal,1,0,0
+alvaro,Fase Grupos,Netherlands,Ecuador,1,0,0
+alvaro,Fase Grupos,England,USA,1,0,0
+alvaro,Fase Grupos,Tunisia,Australia,1,0,0
+alvaro,Fase Grupos,Poland,Saudi Arabia,1,0,0
+alvaro,Fase Grupos,France,Denmark,0,1,0
+alvaro,Fase Grupos,Argentina,Mexico,0,0,1
+alvaro,Fase Grupos,Japan,Costa Rica,0,0,1
+alvaro,Fase Grupos,Belgium,Morocco,0,1,0
+alvaro,Fase Grupos,Croatia,Canada,0,1,0
+alvaro,Fase Grupos,Spain,Germany,1,0,0
+alvaro,Fase Grupos,Cameroon,Serbia,0,1,0
+alvaro,Fase Grupos,South Korea,Ghana,1,0,0
+alvaro,Fase Grupos,Brazil,Switzerland,1,0,0
+luis,Fase Grupos,Portugal,Uruguay,1,0,0
+luis,Fase Grupos,Ecuador,Senegal,0,0,1
+luis,Fase Grupos,Netherlands,Qatar,0,0,1
+luis,Fase Grupos,Wales,England,0,1,0
+luis,Fase Grupos,Iran,USA,0,1,0
+luis,Fase Grupos,Australia,Denmark,1,0,0
+luis,Fase Grupos,Tunisia,France,1,0,0
+luis,Fase Grupos,Poland,Argentina,0,1,0
+luis,Fase Grupos,Saudi Arabia,Mexico,0,1,0
+luis,Fase Grupos,Croatia,Belgium,0,0,1
+luis,Fase Grupos,Canada,Morocco,1,0,0
+luis,Fase Grupos,Japan,Spain,0,1,0
+luis,Fase Grupos,Costa Rica,Germany,0,1,0
+luis,Fase Grupos,Ghana,Uruguay,0,1,0
+luis,Fase Grupos,South Korea,Portugal,0,1,0
+luis,Fase Grupos,Serbia,Switzerland,0,0,1
+luis,Fase Grupos,Cameroon,Brazil,1,0,0
