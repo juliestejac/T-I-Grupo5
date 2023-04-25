@@ -1,7 +1,5 @@
 package Grupo5;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class operacionesConBaseDatos {
     public static Connection crearConexion(Connection conexionBase) {
@@ -22,13 +20,13 @@ public class operacionesConBaseDatos {
         return conexionBase;
     }
 
-    public static void procesarDatos(Connection conexionBase) throws SQLException {
-        String consulta = "select * from equipos";
+    public static ResultSet importarDatos(Connection conexionBase) throws SQLException {
+        String consulta = "select * from pronostico";
         Statement sentencia = conexionBase.createStatement();
-        sentencia.execute("select * from equipos");
+        sentencia.execute(consulta);
         ResultSet contenedorResultado = sentencia.getResultSet();
-        int fila=0;
-        while (contenedorResultado.next()){
+
+  /*      while (contenedorResultado.next()){
             fila++;
             int id = contenedorResultado.getInt("id") ;
             String ronda = contenedorResultado.getString("ronda") ;
@@ -38,7 +36,8 @@ public class operacionesConBaseDatos {
             int golesVisitante = contenedorResultado.getInt("golesVisitante") ;
             System.out.println("\t"+id+"-"+ronda+"\t"+local+"\t"+visitante+"\t"+golesLocal+"\t"+golesVisitante);
         }
-        System.out.println("Cantidad de filas procesadas: "+fila);
+*/        return contenedorResultado;
+
     }
 
 }

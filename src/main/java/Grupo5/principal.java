@@ -1,18 +1,23 @@
 package Grupo5;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class principal {
-    public static void main (String[] args){
+    public static void main (String[] args) throws SQLException{
 
         String archivoPartidos = args[0];
         // contarnos a la base
         Connection conexionBase = null;
-        Connection conexionBase = operacionesConBaseDatos.crearConexion( conexionBase );
+        conexionBase = operacionesConBaseDatos.crearConexion( conexionBase );
         if (conexionBase != null) {
-            ArchivoPartido Partidos = new ArchivoPartido(archivoPartidos);
+            archivoPartido Partidos = new archivoPartido(archivoPartidos);
             Partidos.LeerArchivoPartido();
-            importarPronosticos (conexionBase);
-            calcularResultados();
+            ResultSet listaPronosticos= operacionesConBaseDatos.importarDatos(conexionBase);
+            archivoPronostico pronosticos = new archivoPronostico(listaPronosticos);
+            pronosticos.LeerArchivoPronostico();
+
+            Resultados.ResultadosPronostico();
         }
     }
 }

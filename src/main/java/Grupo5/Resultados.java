@@ -23,18 +23,13 @@ public class Resultados {
     }
     public void ResultadosPronostico(){
 
-        // Crear objeto LeerArchivo y leer el archivo
-        archivoPronostico archivoPronostico = new archivoPronostico("C:\\mi_datos_de_UTN_ejemplos\\pronostico.csv");
-        archivoPronostico.LeerArchivoPronostico();
+
         // Obtener la lista de pronósticos del objeto archivoPronostico
         List<Pronostico> pronosticos = archivoPronostico.getPronosticos();
-        ArchivoPartido archivoPartido = new ArchivoPartido("C:\\mi_datos_de_UTN_ejemplos\\resultado.csv");
-        archivoPartido.LeerArchivoPartido();
 
         // Obtener la lista de partidos del objeto archivoPartido
         List<Partido> partidos = archivoPartido.getResultados();
         puntosPronosticos = 0;
-
 
         for (int i = 0; i < pronosticos.size() && i < partidos.size(); i++) {
             Pronostico resultadoPronostico = pronosticos.get(i);
@@ -46,11 +41,8 @@ public class Resultados {
     }
 
     public void LeerPronosticoPersona(){
-        archivoPronostico archivoPronostico = new archivoPronostico("C:\\mi_datos_de_UTN_ejemplos\\pronostico.csv");
-        archivoPronostico.LeerArchivoPronostico();
+
         List<Pronostico> pronosticos = archivoPronostico.getPronosticos();
-        ArchivoPartido archivoPartido = new ArchivoPartido("C:\\mi_datos_de_UTN_ejemplos\\resultado.csv");
-        archivoPartido.LeerArchivoPartido();
         List<Partido> partidos = archivoPartido.getResultados();
 
         //Ingreso por consola el nombre de la persona y lo filtro

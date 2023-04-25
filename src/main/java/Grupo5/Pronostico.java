@@ -6,14 +6,16 @@ public class Pronostico {
     private String equipoVisitante;
     private int golesLocal;
     private int golesVisitante;
+    private int empate;
 
-    public Pronostico(String persona, String ronda, String equipoLocal, String equipoVisitante, int golesLocal, int golesVisitante) {
+    public Pronostico(String persona, String ronda, String equipoLocal, String equipoVisitante, int golesLocal, int golesVisitante, int empate) {
         this.persona = persona;
         this.ronda = ronda;
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
         this.golesLocal = golesLocal;
         this.golesVisitante = golesVisitante;
+        this.empate = empate;
     }
 
     public int calculoNumeroPronostico() {
