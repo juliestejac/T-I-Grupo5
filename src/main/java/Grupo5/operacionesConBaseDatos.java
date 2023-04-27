@@ -8,9 +8,9 @@ public class operacionesConBaseDatos {
             // db parameters
             //           Class.forName("org.sqlite.JDBC");
             DriverManager.registerDriver(new org.sqlite.JDBC());
-            String tipoyUbicacionBase = "jdbc:sqlite:g5ti.db";
+            String tipoyUbicacionBase = "jdbc:sqlite:TPIntG5.db";
             // create a connection to the database
-            if (conexionBase != null){
+            if (conexionBase == null){
                 conexionBase = DriverManager.getConnection(tipoyUbicacionBase);
             }
             //System.out.println("Conection a SQLite ha sido establecida.");
@@ -26,17 +26,16 @@ public class operacionesConBaseDatos {
         sentencia.execute(consulta);
         ResultSet contenedorResultado = sentencia.getResultSet();
 
-  /*      while (contenedorResultado.next()){
-            fila++;
-            int id = contenedorResultado.getInt("id") ;
-            String ronda = contenedorResultado.getString("ronda") ;
+       while (contenedorResultado.next()){
+
+//            String ronda = contenedorResultado.getString("ronda") ;
             String local = contenedorResultado.getString("equipolocal") ;
             String visitante = contenedorResultado.getString("equipovisitante") ;
-            int golesLocal = contenedorResultado.getInt("goleslocal") ;
-            int golesVisitante = contenedorResultado.getInt("golesVisitante") ;
-            System.out.println("\t"+id+"-"+ronda+"\t"+local+"\t"+visitante+"\t"+golesLocal+"\t"+golesVisitante);
+            int golesLocal = contenedorResultado.getInt("ganalocal") ;
+            int golesVisitante = contenedorResultado.getInt("ganaVisitante") ;
+            System.out.println(local+"\t"+visitante+"\t"+golesLocal+"\t"+golesVisitante);
         }
-*/        return contenedorResultado;
+        return contenedorResultado;
 
     }
 

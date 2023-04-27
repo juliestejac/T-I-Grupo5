@@ -15,7 +15,7 @@ public class archivoPronostico {
     private ResultSet archivo;
     private List<String> personas;
     private List<String> rondas;
-    private List<Pronostico> pronosticos;
+    private static List<Pronostico> pronosticos;
    // private List<Partido> resultados;// agregue para poder leer el archivo Resultados.csv
     public archivoPronostico(ResultSet archivo) {
         this.archivo = archivo;
@@ -65,8 +65,8 @@ public class archivoPronostico {
     public List<String> getRondas() {
         return rondas;
     }
-    public List<Pronostico> getPronosticos() { return pronosticos; }
-  //  public List<Partido> getResultados() { return resultados; }
+    public static List<Pronostico> getPronosticos() { return pronosticos; }
+    /* public List<Partido> getResultados() { return resultados; } */
 }
 
 

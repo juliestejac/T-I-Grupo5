@@ -6,14 +6,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
-    public class archivoPartido {
+    public class ArchivoPartido {
         private static final Pattern SOLO_DIGITOS = Pattern.compile("^\\d+$");
         private static final Pattern SOLO_LETRAS_Y_NUMEROS = Pattern.compile("^[\\w ]+$");
         private static final Pattern SOLO_LETRAS = Pattern.compile("^[a-zA-Z ]+$");
         private String archivo;
         private List<String> rondas;
-        private List<Partido> resultados;// agregue para poder leer el archivo Resultados.csv
-        public archivoPartido(String archivo) {
+        private static List<Partido> resultados;// agregue para poder leer el archivo Resultados.csv
+        public ArchivoPartido(String archivo) {
             this.archivo = archivo;
             this.rondas = new ArrayList<>();
             this.resultados = new ArrayList<>();
@@ -62,7 +62,9 @@ import java.util.regex.Pattern;
        public List<String> getRondas() {
             return rondas;
         }
-       public List<Partido> getResultados() { return resultados; }
+       public static List<Partido> getResultados() {
+           List<Partido> resultados1 = resultados;
+           return resultados1; }
 
     }
 

@@ -6,12 +6,12 @@ import java.sql.SQLException;
 public class principal {
     public static void main (String[] args) throws SQLException{
 
-        String archivoPartidos = args[0];
+        String archivoPartidos = "partidos.csv";
         // contarnos a la base
         Connection conexionBase = null;
         conexionBase = operacionesConBaseDatos.crearConexion( conexionBase );
         if (conexionBase != null) {
-            archivoPartido Partidos = new archivoPartido(archivoPartidos);
+            ArchivoPartido Partidos = new ArchivoPartido(archivoPartidos);
             Partidos.LeerArchivoPartido();
             ResultSet listaPronosticos= operacionesConBaseDatos.importarDatos(conexionBase);
             archivoPronostico pronosticos = new archivoPronostico(listaPronosticos);
