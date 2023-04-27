@@ -17,7 +17,9 @@ public class principal {
             archivoPronostico pronosticos = new archivoPronostico(listaPronosticos);
             pronosticos.LeerArchivoPronostico();
 // modificando algo
-            Resultados.ResultadosPronostico();
+            Resultados resultado = new Resultados();
+            resultado.calcularAciertos();
+            resultado.listarAciertos();
         }
     }
 }

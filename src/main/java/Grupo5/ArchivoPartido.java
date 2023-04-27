@@ -54,6 +54,7 @@ import java.util.regex.Pattern;
                     if (!rondas.contains(ronda)) {
                         rondas.add(ronda);
                     }
+                    //System.out.println(resultado.toString());
                 }
             } catch (IOException e) {
                 e.printStackTrace();

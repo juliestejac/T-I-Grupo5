@@ -41,4 +41,15 @@ public class Partido {
     }
     public int getGolesLocal(){ return golesLocal;}
     public int getGolesVisitante(){ return golesVisitante;}
+
+    @Override
+    public String toString() {
+        return "Partido{" +
+                "ronda='" + ronda + '\'' +
+                ", equipoLocal='" + equipoLocal + '\'' +
+                ", equipoVisitante='" + equipoVisitante + '\'' +
+                ", golesLocal=" + golesLocal +
+                ", golesVisitante=" + golesVisitante +
+                '}';
+    }
 }

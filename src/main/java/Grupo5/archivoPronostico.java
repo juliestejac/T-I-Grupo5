@@ -57,6 +57,7 @@ public class archivoPronostico {
                 if (!rondas.contains(ronda)) {
                     rondas.add(ronda);
                 }
+                //System.out.println(prono);
             }
     }
     public List<String> getPersonas() {

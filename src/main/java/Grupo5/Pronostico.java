@@ -52,6 +52,16 @@ public class Pronostico {
     public int getGolesLocal(){ return golesLocal;}
     public int getGolesVisitante(){ return golesVisitante;}
 
-
-
+    @Override
+    public String toString() {
+        return "Pronostico{" +
+                "persona='" + persona + '\'' +
+                ", ronda='" + ronda + '\'' +
+                ", equipoLocal='" + equipoLocal + '\'' +
+                ", equipoVisitante='" + equipoVisitante + '\'' +
+                ", golesLocal=" + golesLocal +
+                ", golesVisitante=" + golesVisitante +
+                ", empate=" + empate +
+                '}';
+    }
 }

@@ -1,38 +1,23 @@
 package Grupo5;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class Resultados {
+    private List<Persona> personas;
+    //private List<Pronostico> pronosticos;
 
-    private static int puntosPronosticos;
-    private String archivo;
-
-    private List<String> personas;
-    private List<String> rondas;
-    private List<Pronostico> pronosticos;
-    private int puntosPorPersona;
-    private String personaAfiltrar;
-
-    public Resultados(String archivo, int puntosPronosticos) {
-        this.archivo = archivo;
-        Resultados.puntosPronosticos = puntosPronosticos;
+    public Resultados() {
         this.personas = new ArrayList<>();
-        this.rondas = new ArrayList<>();
-        this.pronosticos = new ArrayList<>();
-
+    //    this.pronosticos = new ArrayList<>();
     }
-    public static void ResultadosPronostico(){
+/*    public static void ResultadosPronostico(){
 
 
         // Obtener la lista de pronósticos del objeto archivoPronostico
-        List<Pronostico> pronosticos;
-        pronosticos = Collections.<Pronostico>unmodifiableList(archivoPronostico.getPronosticos());
+        List<Pronostico> pronosticos = archivoPronostico.getPronosticos();
 
         // Obtener la lista de partidos del objeto archivoPartido
         List<Partido> partidos = ArchivoPartido.getResultados();
-        puntosPronosticos = 0;
 
         for (int i = 0; i < pronosticos.size() && i < partidos.size(); i++) {
             Pronostico resultadoPronostico = pronosticos.get(i);
@@ -41,9 +26,9 @@ public class Resultados {
                 puntosPronosticos++;
             }
         }
-    }
+    }*/
 
-    public void LeerPronosticoPersona(){
+/*    public void LeerPronosticoPersona(){
 
         List<Pronostico> pronosticos = archivoPronostico.getPronosticos();
         List<Partido> partidos = ArchivoPartido.getResultados();
@@ -63,18 +48,46 @@ public class Resultados {
                 }
             }
         }
+    }*/
+    public void listarAciertos(){
+        for (Persona cada: personas) {
+            System.out.println(cada.getNombre()+" hizo "+cada.getApuestas()+" pronosticos y obtuvo "+cada.getAciertos()+" aciertos.");
+        }
+    }
+    public void calcularAciertos (){
+        List<Pronostico> pronosticos = archivoPronostico.getPronosticos();
+        List<Partido> partidos = ArchivoPartido.getResultados();
+        //List<Persona> personas = new ArrayList<>();
+
+        //primero creo la lista de personas que apostaron
+        for (Pronostico cadaRegistro: pronosticos) {
+            String nombre = cadaRegistro.getPersona();
+            boolean hay=false;
+            for (Persona sujeto: personas) {
+                if (sujeto.getNombre().equals(nombre))
+                    hay=true;
+            }
+            if (!hay){
+                Persona nuevo = new Persona(nombre);
+                personas.add(nuevo);
+            }
+        }
+        for (Persona perso: personas) {
+            for (Pronostico apuesta: pronosticos) {
+                if (perso.getNombre().equals(apuesta.getPersona())){
+                    //comparar el pronostico con el partido
+                    for (Partido jugado: partidos) {
+                        if (jugado.getEquipoLocal().equals(apuesta.getEquipoLocal()) && jugado.getEquipoVisitante().equals(apuesta.getEquipoVisitante())){
+                            perso.sumaApuestas();
+                            if (jugado.calculoNumeroResultado()==apuesta.calculoNumeroPronostico()){
+                                perso.sumaAciertos();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
-    public int getPuntosPronostico(){ return puntosPronosticos;}
-    public int getPuntosPorPersona(){ return puntosPorPersona;}
-    public String getPersonaAfiltrar(){ return personaAfiltrar;}
-
-
-    public int getPuntosPronosticos() {
-        return puntosPronosticos;
-    }
-
-    public void setPuntosPronosticos(int puntosPronosticos) {
-        this.puntosPronosticos = puntosPronosticos;
-    }
 }

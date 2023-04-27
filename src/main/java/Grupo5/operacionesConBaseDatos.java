@@ -26,7 +26,7 @@ public class operacionesConBaseDatos {
         sentencia.execute(consulta);
         ResultSet contenedorResultado = sentencia.getResultSet();
 
-       while (contenedorResultado.next()){
+/*       while (contenedorResultado.next()){
 
 //            String ronda = contenedorResultado.getString("ronda") ;
             String local = contenedorResultado.getString("equipolocal") ;
@@ -34,7 +34,7 @@ public class operacionesConBaseDatos {
             int golesLocal = contenedorResultado.getInt("ganalocal") ;
             int golesVisitante = contenedorResultado.getInt("ganaVisitante") ;
             System.out.println(local+"\t"+visitante+"\t"+golesLocal+"\t"+golesVisitante);
-        }
+        }*/
         return contenedorResultado;
 
     }
