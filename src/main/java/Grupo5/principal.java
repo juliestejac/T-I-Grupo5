@@ -16,7 +16,7 @@ public class principal {
             ResultSet listaPronosticos= operacionesConBaseDatos.importarDatos(conexionBase);
             archivoPronostico pronosticos = new archivoPronostico(listaPronosticos);
             pronosticos.LeerArchivoPronostico();
-
+// modificando algo
             Resultados.ResultadosPronostico();
         }
     }
